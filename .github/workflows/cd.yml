@@ -5,6 +5,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Removed the environment line so it looks at global Repository Secrets
     steps:
       - uses: actions/checkout@v4
       - run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}

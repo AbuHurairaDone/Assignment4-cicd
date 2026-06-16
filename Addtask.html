@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Add Task</title>
+
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #2c3e50;
+            padding: 15px 0;
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #1abc9c;
+        }
+
+        /* Button */
+        .btn {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="add-task.html">Add Task</a>
+            <a href="task-list.html">Task List</a>
+            <a href="task-detail.html">Task Detail</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Add New Task</h1>
+        <p>Create and assign a new task to your team.</p>
+
+        <form action="#" method="post">
+
+            <div class="form-group">
+                <label for="title">Task Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter task title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Task Description</label>
+                <textarea id="description" name="description" placeholder="Describe the task..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="assignee">Assign To</label>
+                <input type="text" id="assignee" name="assignee" placeholder="Enter team member name">
+            </div>
+
+            <div class="form-group">
+                <label for="priority">Priority</label>
+                <select id="priority" name="priority">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="deadline">Deadline</label>
+                <input type="date" id="deadline" name="deadline">
+            </div>
+
+            <button type="submit" class="btn">Add Task</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
